@@ -121,7 +121,7 @@ function renderC3(){
     // 製作C3: columns
     let newAry = arrangeAry(productAry); //用來放 "營收前三&其他" 的 "品項" 與 "品項總營收"
     // 製作C3: colors
-    newColors = {};  //用來放C3圓餅圖的顏色
+    const newColors = {};  //用來放C3圓餅圖的顏色
     newColors[`${newAry[0][0]}`] = "#DACBFF";
     newColors[`${newAry[1][0]}`] = "#9D7FEA";
     newColors[`${newAry[2][0]}`] = "#5434A7";
@@ -141,7 +141,6 @@ function renderC3(){
 // 對陣列做排列，排出營收 "前三" 與 "其他"
 function arrangeAry(ary){
     let newAry = new Array(); //排列後陣列
-    let temp=[]; //暫存資料
 
     // 將傳進來的參數ary做營收排序(由高到低)
     ary.sort(function(a,b){
